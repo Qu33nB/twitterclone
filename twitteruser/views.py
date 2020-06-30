@@ -2,18 +2,18 @@ from django.shortcuts import render, reverse, HttpResponseRedirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 
-from custom_user.models import CustomUser
-from custom_user.forms import SignInForm, SignUpForm
-from customUser import settings
+from twitteruser.models import CustomUser
+from twitteruser.forms import SignInForm, SignUpForm
+from twitterclone import settings
 
 # Create your views here.
 @login_required
 def index(request):
     info = settings.AUTH_USER_MODEL
-    return render(request, 'index.html', {'info': info})
+    return render(request, 'index.htm', {'info': info})
 
 def signin(request):
-    html = 'generic_form.html'
+    html = 'generic_form.htm'
     
     if request.method == 'POST':
         form = SignInForm(request.POST)
@@ -36,7 +36,7 @@ def signout(request):
     return HttpResponseRedirect(reverse('home'))
 
 def signup(request):
-    html = 'generic_form.html'
+    html = 'generic_form.htm'
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
