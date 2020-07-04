@@ -6,6 +6,12 @@
     <title>TwitterClone</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    {% crsf_token %}
+    <h1>Notifications</h1>
+
+    <ul>
+        {% for alert in alerts %}
+            <li> {{alert.tweet}} ~ {{alert.tweet.author}} </li>
+    </ul>
 </body>
 </html>

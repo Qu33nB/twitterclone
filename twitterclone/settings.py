@@ -125,4 +125,4 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'twitteruser.CustomUser'
 
-LOGIN_URL = '/signin/'
+LOGIN_URL = '/login/'

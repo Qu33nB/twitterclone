@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from twitteruser.models import CustomUser
-from twitteruser.forms import SignUpForm
+from authentication.forms import SignUpForm
 # Register your models here.
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances

@@ -6,14 +6,13 @@
     <title>TwitterClone</title>
 </head>
 <body>
-     
-<form action="" method='post'>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value='Submit!'>
-</form>
-
-<button><a href='/signup/'>Sign Up Here!</a></button>
-<button><a href='/signin/'>Sign In Here!</a></button>
+        
+    <form action="" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value='Submit!'>
+    </form>
+    <br>
+    <button><a href='/signup/'>Sign Up Here!</a></button>
 </body>
 </html>
